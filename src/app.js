@@ -24,7 +24,7 @@ app.get("/about", (req, res) => {
 
 app.get("/weather", (req, res) => {
   res.render("weather", {
-    about: "welcome to weather page",
+    title: "Welcome to weather page",
     data: weatherDate,
     description: weatherDate.list[0].weather[0].description,
     celciusDay: Math.round(parseFloat(weatherDate.list[0].temp.day) - 273.15),
