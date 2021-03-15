@@ -3,6 +3,8 @@ const p_request = require("postman-request");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+const path = require("path");
+app.use(express.static(__dirname));
 let weatherDate = "";
 const url =
   "https://api.openweathermap.org/data/2.5/forecast/daily?q=Hebron&appid=cad86314552b94deb5b82fa8e5e1e33e";
